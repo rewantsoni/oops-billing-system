@@ -1,0 +1,28 @@
+Billing system used by small merchants to generate a bill.
+
+Item
+    - name
+    - price
+
+quantity int
+
+Cart - ValueObject
+    - map [item] quantity
+    - getItemsWithQuantity() map [item] quantity
+
+Billing system - return the bill
+    - calculationSystem
+    - billGenerator
+    - generateBill(Cart) Bill
+
+Calculation system
+    - compute(Cart) float
+
+BillGenerator
+    - generate(Cart,Total) Bill
+
+Bill
+    - Cart
+    - total
+
+
